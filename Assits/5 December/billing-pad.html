@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
+
+<style>
+    body{
+        font-family: 'Roboto', sans-serif;
+    }
+    .main-div{
+       margin-left: 35px;
+    }
+
+  .container{
+    margin: auto;
+
+  }
+
+  .CreateBill{
+    
+    margin-left: 60px;
+  }
+</style>
+
+   
+</head>
+<body>
+    <div class="container  mt-4 border rounded">
+        <h2 class="CreateBill" >Create Bill</h2>
+         <div class="row main-div"> 
+        <div class="col-md-5"> 
+         <form action=""  class="form p-4 bg-primary border rounded-3 text-white">
+
+            <div class="mb-3">
+                <label for="" class="form-label"> Item Name</label>
+                <input type="text" id="item-name" class="form-control rounded-1" placeholder="Enter item name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Base item Price</label>
+                <input type="number" id="base-item-price" class="form-control rounded-1" placeholder="eg. Rice 20kg"  onkeyup="putTotal()" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label"> Qty.</label>
+                <input type="number" id="item-qty" class="form-control rounded-1" placeholder="eg. 10pcs"  onkeyup="putTotal()"  >
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label"> Total Amount</label>
+                <input type="number" id="total-amount" class="form-control rounded-1" readonly >
+            </div>
+            <div class="mb-3">
+                <button type="button" class="btn btn-success rounded-1 content" id="add-item" onclick="addItem()" >Add Item</button>
+            </div>
+
+         </form>
+        </div>
+
+
+        <div class="col-md-6">
+
+            <table class="table table-bordered">
+                <thead>
+
+                    <tr>
+                        <td colspan="5">
+                            <strong> To</strong><br>
+                             <span> Akram Khan</span><br>
+                             <strong>Address</strong><p>South Extension Kotla Mubarkpur Delhi-301705</p>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="5">
+                            <strong>From</strong><br>
+                             <span> Shahbuddin Ansari</span><br>
+                             <strong>Address</strong><p>South Extension Kotla Mubarkpur Delhi-301705</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Sr no.
+                        </th>
+
+                        <th>
+                            Item Name
+                        </th>
+
+                        <th>
+                            Price
+                        </th>
+
+                        <th>
+                            Qty.
+                        </th>
+
+                        <th>
+                        Total
+                        </th>
+                    </tr>
+
+
+                </thead>
+
+                <tbody id="tBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="billing-pad.js"></script>
+</body>
+</html>
